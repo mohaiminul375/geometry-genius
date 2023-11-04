@@ -43,4 +43,21 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 
     //send data to table by function
     setDataTable(gName, areaCalculation);
-})
+});
+
+//calculate Rectangle area volume
+document.getElementById('btn-rectangle').addEventListener('click', function(){
+
+    //get input field value by function
+    const length = getInputFieldValue('rectangle-l')
+    const width = getInputFieldValue('rectangle-w')
+    
+    //get text element value by function
+    const gName = getTextElementValue('rectangle-name');
+
+    const areaCalculation = length * width;
+    console.log(areaCalculation);
+
+    //send data to table by function
+    setDataTable(gName, areaCalculation);
+});
