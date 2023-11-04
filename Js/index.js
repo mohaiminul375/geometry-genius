@@ -7,14 +7,27 @@ function getInputFieldValue(id){
     return inputField
 };
 
-//function for get text element value
-// function getTextElementValue(id){
-// const textElementString = document.getElementById(id).innerText;
-// const textElement = parseFloat(textElementString);
-// return textElement;
-// }
+// function for get text element value
+function getTextElementValue(id){
+const textElementString = document.getElementById(id).innerText;
+
+return textElementString;
+}
 
 
+//set data table by function
+function setDataTable(gName, areaCalculation){
+    
+    const container = document.getElementById('table-container')
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${1}</td>
+      <td>${gName}</td>
+      <td>${areaCalculation}cm<sup>2</sup></td>
+      <td><button>Convert</button></td>
+    `
+    container.appendChild(tr);
+}
 //calculate triangle area volume
 document.getElementById('btn-triangle').addEventListener('click', function(){
 
@@ -23,8 +36,11 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
     const height = getInputFieldValue('triangle-h')
     
     //get text element value by function
-    
+    const gName = getTextElementValue('triangle-name');
 
-    const triangleCalculation = 0.5 * base * height;
-    console.log(triangleCalculation);
+    const areaCalculation = 0.5 * base * height;
+    console.log(areaCalculation);
+
+    //send data to table by function
+    setDataTable(gName, areaCalculation);
 })
