@@ -36,17 +36,6 @@ let serial = 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //calculate triangle area volume
 document.getElementById('btn-triangle').addEventListener('click', function(){
 
