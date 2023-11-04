@@ -39,7 +39,7 @@ let serial = 0;
 //calculate triangle area volume
 document.getElementById('btn-triangle').addEventListener('click', function(){
 
-      serial += 1;
+      
     //get input field value by function
     const base = getInputFieldValue('triangle-b')
     const height = getInputFieldValue('triangle-h')
@@ -51,7 +51,7 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
    
   if(!isNaN(base) && !isNaN(height)){
     
-
+    serial += 1;
     //send data to table by function
     setDataTable(serial,gName, areaCalculation);
     
@@ -65,7 +65,7 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 
 //calculate Rectangle area volume
 document.getElementById('btn-rectangle').addEventListener('click', function(){
-    serial += 1;
+    
     //get input field value by function
     const length = getInputFieldValue('rectangle-l')
     const width = getInputFieldValue('rectangle-w')
@@ -77,7 +77,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
    
     if(!isNaN(length) && !isNaN(width)){
         
-    
+        serial += 1;
         //send data to table by function
         setDataTable(serial,gName, areaCalculation);
     } else{
@@ -89,7 +89,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
 
 //calculate Parallelogram area volume
 document.getElementById('btn-parallelogram').addEventListener('click', function(){
-    serial += 1;
+    
     //get input field value by function
     const base = getInputFieldValue('parallelogram-b')
     const height = getInputFieldValue('parallelogram-h')
@@ -101,7 +101,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
   
     if(!isNaN(base) && !isNaN(height)){
     
-
+        serial += 1;
     //send data to table by function
     setDataTable(serial,gName, areaCalculation);
     } else{
@@ -113,7 +113,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
 
 //calculate Rhombus area volume
 document.getElementById('btn-rhombus').addEventListener('click', function(){
-    serial += 1;
+    
     //get input field value by function
     const d1 = getInputFieldValue('rhombus-d1')
     const d2 = getInputFieldValue('rhombus-d2')
@@ -127,6 +127,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
     //send data to table by function
     
     if(!isNaN(d1) && !isNaN(d2)){
+        serial += 1;
         setDataTable(serial,gName, areaCalculation);
 
     } else{
@@ -137,7 +138,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
 //calculate pentagon area volume
 
 document.getElementById('btn-pentagon').addEventListener('click', function(){
-    serial += 1;
+    
     //get input field value by function
     const p = getInputFieldValue('pentagon-p')
     const b = getInputFieldValue('pentagon-b')
@@ -151,6 +152,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
     //send data to table by function
   
     if(!isNaN(p) && !isNaN(b)){
+        serial += 1;
         setDataTable(serial,gName, areaCalculation);
 
     } else{
@@ -161,7 +163,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
 //calculate pentagon area volume
 
 document.getElementById('btn-ellipse').addEventListener('click', function(){
-    serial += 1;
+    
     //get input field value by function
     const a = getInputFieldValue('ellipse-a')
     const b = getInputFieldValue('ellipse-b')
@@ -174,6 +176,7 @@ document.getElementById('btn-ellipse').addEventListener('click', function(){
 
     //send data to table by function
     if(!isNaN(a) && !isNaN(b)){
+        serial += 1;
         setDataTable(serial,gName, areaCalculation);
 
     } else{
