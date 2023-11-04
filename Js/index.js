@@ -1,4 +1,3 @@
-console.log('indexjs')
 
 //function for get input field value
 function getInputFieldValue(id){
@@ -15,7 +14,8 @@ const textElementString = document.getElementById(id).innerText;
 return textElementString;
 }
 
-let serial = 0;
+
+
 //set data table by function
 function setDataTable(serial,gName, areaCalculation){
     
@@ -29,6 +29,24 @@ function setDataTable(serial,gName, areaCalculation){
     `
     container.appendChild(tr);
 }
+
+
+let serial = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //calculate triangle area volume
 document.getElementById('btn-triangle').addEventListener('click', function(){
 
@@ -47,6 +65,8 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
 
     //send data to table by function
     setDataTable(serial,gName, areaCalculation);
+    
+    
   } else{
       alert('please input a valid number')
    return; 
