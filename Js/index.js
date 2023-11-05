@@ -24,10 +24,20 @@ function setDataTable(serial,gName, areaCalculation){
     tr.innerHTML = `
       <td>${serial}</td>
       <td>${gName}</td>
-      <td>${(areaCalculation).toFixed(2)}cm<sup>2</sup></td>
-      <td><button class='bg-blue-700 px-2 py-3 text-white font-semibold rounded-lg'>Convert</button></td>
+      <td id='area-calculation'>${(areaCalculation).toFixed(2)}cm<sup>2</sup></td>
+      <td><button id='btn-convert' class='bg-blue-700 px-2 py-3 text-white font-semibold rounded-lg'>Convert to m<sup>2</sup></button></td>
     `
     container.appendChild(tr);
+    // console.log(typeof gName);
+
+    document.getElementById('btn-convert').addEventListener('click', function(){
+        const areaValueString = getTextElementValue('area-calculation');
+        const areaValue = parseFloat(areaValueString);
+       
+        const convertTom = areaValue * 0.01;
+        // console.log(convertTom);
+        document.getElementById('area-calculation').innerText = convertTom;
+    })
 }
 
 
