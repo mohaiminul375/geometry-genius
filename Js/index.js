@@ -28,8 +28,8 @@ function setDataTable(serial,gName, areaCalculation){
       <td><button id='btn-convert' class='bg-blue-700 px-2 py-3 text-white font-semibold rounded-lg'>Convert to m<sup>2</sup></button></td>
     `
     container.appendChild(tr);
-    // console.log(typeof gName);
-
+    
+   
     document.getElementById('btn-convert').addEventListener('click', function(){
         const areaValueString = getTextElementValue('area-calculation');
         const areaValue = parseFloat(areaValueString);
@@ -37,6 +37,7 @@ function setDataTable(serial,gName, areaCalculation){
         const convertTom = areaValue * 0.01;
         // console.log(convertTom);
         document.getElementById('area-calculation').innerText = convertTom;
+        
     })
 }
 
