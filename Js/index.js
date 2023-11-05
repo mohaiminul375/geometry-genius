@@ -25,7 +25,7 @@ function setDataTable(serial,gName, areaCalculation){
       <td>${serial}</td>
       <td>${gName}</td>
       <td>${(areaCalculation).toFixed(2)}cm<sup>2</sup></td>
-      <td><button>Convert</button></td>
+      <td><button class='bg-blue-700 px-2 py-3 text-white font-semibold rounded-lg'>Convert</button></td>
     `
     container.appendChild(tr);
 }
